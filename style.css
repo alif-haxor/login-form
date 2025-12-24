@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #222;
+  color: #fff;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #00c3ff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+  height: 100vh;
+  background: url("https://picsum.photos/1920/1080") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== LOGIN BOX ===== */
+.login-box {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  width: 300px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: center;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 10px;
+  background: #00c3ff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.login-box button:hover {
+  background: #0099cc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #222;
+    width: 200px;
+    flex-direction: column;
+    display: none;
+    padding: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
